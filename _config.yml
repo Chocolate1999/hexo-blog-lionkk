@@ -99,3 +99,13 @@ theme: Butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+
+# bilibili番剧列表配置
+bangumi:
+  enable: false 
+  vmid: 
+  title: '追番列表'
+  quote: '生命不息，追番不止！'
+  show: 1
+  loading: '/img/bangumi-loading.gif'
