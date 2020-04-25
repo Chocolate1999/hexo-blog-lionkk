@@ -138,10 +138,10 @@ category_img: https://cdn.jsdelivr.net/npm/blog-gallery@1.0.0/1/20200206161613.w
 
 
 # 如果你有使用hexo-douban，可配置這個
-# douban:
-#   meta: false
-#   movies_img:
-#   books_img:
+douban:
+   meta: true
+   movies_img: https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/movie.jpg
+   books_img: https://cdn.jsdelivr.net/npm/blog-gallery@1.0.0/1/20200206161657.webp
 #   games_img:
 
 cover:

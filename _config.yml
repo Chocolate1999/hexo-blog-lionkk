@@ -104,7 +104,7 @@ deploy:
 # bilibili番剧列表配置
 bangumi:
   enable: false 
-  vmid: 
+  vmid: '351534170'
   title: '追番列表'
   quote: '生命不息，追番不止！'
   show: 1
@@ -121,4 +121,17 @@ live2d:
 		width: 150       #模型宽度
 		height: 300      #模型高度
 	mobile: 
-		show: false      #是否在手机端显示
+    show: false      #是否在手机端显示
+    
+# 添加豆瓣
+# 豆瓣
+douban:
+  user: 211251422
+  builtin: true
+  book:
+    title: '好书推荐'
+    quote: '读书好，好读书，读好书'
+  movie:
+    title: '电影'
+    quote: '那些在电影院看过的电影'
+  timeout: 10000
