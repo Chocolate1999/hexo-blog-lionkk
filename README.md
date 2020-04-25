@@ -29,7 +29,11 @@
 
 >最后，如果项目和教程对你有所帮助或者你看见了还算比较喜欢，欢迎给我star，谢谢您！
 
-## :sunny:特性
+## :loudspeaker:公告
+
+2020年4月25日 2点 已经把`hexo-blog-lionkk`博客搭建起来了，目前版本是已经够用了，关于新加入的特性可以参考下文内容。部分没有实现的功能，在教程里面也已提供详细的文档，你可以直接`clone`下来，随你 `DIY`，形成你的博客风格，
+
+## :partly_sunny:特性
 `hexo-theme-butterfly `是基于 <a href="https://github.com/Molunerfinn">Molunerfinn</a> 的<a href="https://github.com/Molunerfinn/hexo-theme-melody"> hexo-theme-melody</a> 的基础上进行开发的。
 
 :pencil:	作者: <a href="https://github.com/jerryc127/hexo-theme-butterfly">JerryC</a>
@@ -90,20 +94,24 @@
  - [x] 豆瓣插件（`movie`、`book`、`game`）
  - [ ] 友链界面加入自定义文字
  - [ ] 友链链接区块加入一行小字
+ - [ ] Valine添加博主标签及评论微信、QQ通知
+ - [ ] 文章尾部投票打星系统
  - [ ] 添加聚宝盒页面
  - [x] 添加首页导航
  - [x] 添加音乐 `music` 页面
+ - [ ] `Gitalk`、`Valine` 双评论系统切换
+ - [ ] 随机文章跳转
+ - [ ] 加入 `steam` 游戏库界面
  - [ ] 持续更新...
-
-## :sunny:贡献
+## :pushpin:贡献
 本仓库已经为您搭建好了博客框架，极大地简化了您构建博客的工作量和复杂度，每个人都可以下载并修改成自己喜欢样式！如果你有修改想法，`fork`本仓库，欢迎PR！
 
-## :sunny:排版
+## :golf:排版
 
 笔记内容按照 <a href="https://mazhuang.org/wiki/chinese-copywriting-guidelines/">中文文案排版指北</a>进行排版。
 
 
-## :sunny:总结
+## :rainbow:总结
 
  **神奇の沟通**
 
