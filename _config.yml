@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: blog-lionkk
+subtitle: 'blog-lionkk'
+description: '不是只会写业务代码的前端攻城狮！'
+keywords: [Vue, 面试, CSDN, ES6, React, 前端]  #网站的关键词
+author: lionLoveVue
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

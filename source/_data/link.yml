@@ -1,0 +1,29 @@
+class:
+  link_list:
+    1:
+      name: 超逸の技术博客
+      link: https://chocolate.blog.csdn.net/
+      avatar: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+      descr: 学如逆水行舟，不进则退
+
+class2:
+  link_list:
+    1:
+      name: 超逸の技术博客
+      link: https://chocolate.blog.csdn.net/
+      avatar: /img/avatar.png
+      descr: 学如逆水行舟，不进则退
+      
+class3:
+   class_name: 链接失效
+   link_list:
+     1:
+       name: 未知1
+       link: https://blog.xxx.com
+       avatar: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+       descr: test
+     2:
+       name: 未知2
+       link: https://www.axxxx.cn/
+       avatar: https://img.antmoe.com/avatar.png
+       descr: test

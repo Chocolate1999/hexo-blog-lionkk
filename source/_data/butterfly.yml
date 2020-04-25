@@ -5,15 +5,24 @@
 # xxx || icon:
 #   xxx || 連結 || icon
 menu:
-  Home: / || fa fa-home
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
-  Categories: /categories/ || fa fa-folder-open
-  Link: /link/ || fa fa-link
-  About: /about/ || fa fa-heart
-  List||fa fa-list:
-    - Music || /music/ || fa fa-music
-    - Movie || /movies/ || fa fa-film
+  首页: / || fa fa-home
+  时间轴: /archives/ || fa fa-archive
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-folder-open
+  媒体||fas fa-list:
+    - 番剧 || /bangumis/ || fab fa-youtube
+    - 电影 || /movies/ || fa fa-film
+    - 书单 || /books/ || fas fa-book
+    - 音乐 || /music/ || fa fa-music
+  聚宝盒: /box/ ||fab fa-xbox
+  #游戏||fas fa-gamepad:
+  微语: /talk/ || far fa-comment
+  清单||fa fa-heartbeat:
+    - 相册 || /gallery/ || far fa-image
+    - 主页 || /home/ || fab fa-phoenix-framework
+  留言板: /contact/ || far fa-comments
+  友链: /link/ || fa fa-link
+  关于: /about/ || fa fa-heart
 
 # Favicon
 # ---------------
@@ -52,7 +61,7 @@ copy:
 #   icon: link || the description
 # ---------------
 social:
-  fa fa-github: https://github.com/jerryc127 || Github
+  fab fa-github-alt: https://github.com/Chocolate1999 || Github
   fa fa-envelope: mailto:xxxxxxx@gmail.com || Email
   fa fa-rss: /atom.xml || RSS
 
@@ -107,25 +116,26 @@ mermaid:
 # Post info settings
 # ---------------
 avatar:
-  img: /img/avatar.png
-  effect: false # 頭像會一直轉圈
+  img: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+  effect: true # 頭像會一直轉圈
 
 # the banner image of index
-index_img:
+index_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
 
 # if the banner of page not setting,it will show the top_img
-default_top_img: /img/index.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.3.9/img/Butterfly/index.webp
 
 # the banner image of archive page
-archive_img:
+archive_img: https://cdn.jsdelivr.net/npm/blog-gallery@1.0.0/2/20200206164303.webp
 
 # the banner image of tag page
 # tag page, look like https://xxxxxxxxx.com/tags/butterfly
-tag_img:
+tag_img: https://cdn.jsdelivr.net/npm/blog-gallery@1.0.0/2/20200206164258.webp
 
 # the banner image of category page
 # category page, look like https://xxxxxxxxx.com/categories/butterfly
-category_img:
+category_img: https://cdn.jsdelivr.net/npm/blog-gallery@1.0.0/1/20200206161613.webp
+
 
 # 如果你有使用hexo-douban，可配置這個
 # douban:
@@ -414,7 +424,7 @@ tag_ui: # 留空或index
 background:
 
 # footer是否顯示圖片背景(與top_img一致)
-footer_bg: false
+footer_bg: true
 
 # 背景特效
 # 避免卡頓，建議只開啟一個
@@ -436,7 +446,7 @@ canvas_ribbon_piao:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
+  enable: true
   color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
@@ -445,8 +455,8 @@ canvas_nest:
 
 # 打字效果
 activate_power_mode:
-  enable: false
-  colorful: true # 冒光特效
+  enable: true
+  colorful: false # 冒光特效
   shake: true # 抖動特效
 
 # 鼠標點擊效果
@@ -480,7 +490,7 @@ beautify:
 
 # 全局字體
 font:
-  enable: false
+  enable: true
   font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif
   code-font: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace, Helvetica Neue For Number
 
@@ -502,28 +512,28 @@ subtitle:
   # 打字效果
   effect: true
   # 循環或者只打字一次
-  loop: false
+  loop: true
   # source調用第三方服務
   # source: false 關閉調用
-  # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
-  # source: 2  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # source: 1  調用金山詞霸的每日一句（簡體）
+  # source: 2  調用一言網的一句話（簡體） #https://hitokoto.cn/
   # source: 3  調用一句網（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
+  source: 4
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 今日事&#44;今日畢
-    - Never put off till tomorrow what you can do today
+    - 学如逆水行舟&#44;不进则退
+    - Learning is like rowing upstream, not to advance is to fall back
 
 # fontawesome圖標
 # 默認使用的是 fontawesome v4版本的圖標
 fontawesome_v5:
-  enable: false
+  enable: true
 
 # 加載動畫 Loading Animation
-preloader: false
+preloader: true
 
 ####    側邊欄    ####
 #-------------------------------------
@@ -537,7 +547,7 @@ aside:
     description:
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 感谢访问本站，若喜欢请收藏 ^_^
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
