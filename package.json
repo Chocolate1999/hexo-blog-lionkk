@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "hexo": "^4.0.0",
+    "hexo-abbrlink": "^2.0.5",
     "hexo-bilibili-bangumi": "^1.1.10",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-calendar": "git://github.com/howiefh/hexo-generator-calendar.git",
