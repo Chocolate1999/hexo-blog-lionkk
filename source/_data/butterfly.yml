@@ -566,6 +566,7 @@ aside:
     limit: 8 # if set 0 will show all
   card_webinfo: true
   card_pixiv: true
+  card_calendar: true
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -697,7 +698,12 @@ inject:
   head:
   # - <link rel="stylesheet" href="xxxxx">
   bottom:
+    - <script src="/js/calendar.js"></script>
+    - <script src="/js/languages.js"></script>
     # - <script src="xxxx"></script>
+
+
+
 
 # CDN
 # 非必要不要修改
