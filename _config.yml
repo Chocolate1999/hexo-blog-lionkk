@@ -30,6 +30,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - 'home/*'
+  - 'home/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -100,10 +102,9 @@ theme: Butterfly
 deploy:
   type: ''
 
-
 # bilibili番剧列表配置
 bangumi:
-  enable: false 
+  enable: true 
   vmid: '351534170'
   title: '追番列表'
   quote: '生命不息，追番不止！'
