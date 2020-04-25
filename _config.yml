@@ -109,3 +109,16 @@ bangumi:
   quote: '生命不息，追番不止！'
   show: 1
   loading: '/img/bangumi-loading.gif'
+
+# 添加卡通人物
+live2d:
+	enable: true
+	scriptFrom: local
+	model: 
+		use: live2d-widget-model-haruto #模型选择
+	display: 
+		position: right  #模型位置
+		width: 150       #模型宽度
+		height: 300      #模型高度
+	mobile: 
+		show: false      #是否在手机端显示
