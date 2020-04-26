@@ -1,0 +1,83 @@
+#pagination
+  overflow: hidden
+  margin-top: 1rem
+  width: 100%
+
+  .pagination
+    text-align: center
+
+  .page-number
+    display: inline-block
+    margin: 0 .2rem
+    min-width: w = 1.2rem
+    height: w
+    text-align: center
+    line-height: w
+    cursor: pointer
+
+    &.current
+      background: $theme-paginator-color
+      color: $button-color
+      cursor: default
+
+  img.prev_cover,
+  img.next_cover
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: .4
+    transition: all .6s
+    object-fit: cover
+
+  .pagination-info
+    position: absolute
+    top: 50%
+    padding: 1rem 2rem
+    width: 100%
+    transform: translate(0, -50%)
+
+  .prev_info,
+  .next_info
+    overflow: hidden
+    color: $button-color
+    text-overflow: ellipsis
+    white-space: nowrap
+    font-weight: 500
+
+  .next-post
+    .pagination-info
+      text-align: right
+
+  .pull-full
+    width: 100% !important
+
+  .prev-post .label,
+  .next-post .label
+    color: alpha($white, .9)
+    text-transform: uppercase
+    font-size: 90%
+
+  .prev-post,
+  .next-post
+    width: 50%
+
+    a
+      position: relative
+      display: block
+      overflow: hidden
+      height: 150px
+
+    &:hover
+      img.prev_cover,
+      img.next_cover
+        opacity: .8
+        transform: scale(1.1)
+
+  &.pagination_post
+    margin: 2rem 0 !important
+    background: $dark-black
+
+@media screen and (max-width: 768px)
+  .prev-post,
+  .next-post
+    width: 100% !important

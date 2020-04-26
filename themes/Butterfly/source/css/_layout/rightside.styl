@@ -1,0 +1,60 @@
+#rightside
+  position: fixed
+  right: -38px
+  bottom: 40px
+  opacity: 0
+  transition: all .5s
+
+  #rightside-config-hide
+    transform: translate(35px, 0)
+
+  .rightside-in
+    transform: translate(0, 0) !important
+    animation: rightsideIn .3s
+
+  .rightside-out
+    animation: rightsideOut .3s
+
+  & > div
+    & > i,
+    & > a,
+    & > div
+      display: block
+      margin-bottom: 2px
+      width: 30px
+      height: 30px
+      background-color: $light-blue
+      color: $button-color
+      text-align: center
+      font-size: 16px
+      line-height: 29px
+      cursor: pointer
+
+      &:hover
+        background-color: $theme-button-hover-color
+
+  #rightside_config
+    i
+      animation: avatar_turn_around 2s linear infinite
+
+  #mobile-toc-button
+    display: none
+
+@media screen and (max-width: $bg)
+  #rightside
+    #mobile-toc-button
+      display: block
+
+@keyframes rightsideIn
+  0%
+    transform: translate(30px, 0)
+
+  100%
+    transform: translate(0, 0)
+
+@keyframes rightsideOut
+  0%
+    transform: translate(0, 0)
+
+  100%
+    transform: translate(30px, 0)

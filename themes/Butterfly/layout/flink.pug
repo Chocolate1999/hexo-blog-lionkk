@@ -1,0 +1,37 @@
+#page
+  .flink#article-container
+    each i in site.data.link
+      h2= i.class_name
+      h4= i.cdescr
+      .post-cards
+        .md-links
+          each item in i.link_list
+            .md-links-item(style= item.color ? `--primary-color:${item.color};border-width:${item.width};border-style:${item.style};animation: ${item.custom} ${item.time} infinite alternate; background:${item.background}` : 'border-width:0px;border-style:solid;animation: link_custom 0s infinite alternate;background:0')
+              a.customcolor(href=item.link  title=item.name target="_blank" rel=item.remove ? "external nofollow" : "" style=item.namecolor ? `--namecolor:${item.namecolor}` : '')
+                if theme.lazyload.enable
+                  img.lazyload(data-src=item.avatar onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt=item.name,style=item.rotate ? `--primary-rotate:${item.rotate};--autotime:${item.autotime};` : '--primary-rotate:0deg' class=item.autorotate ? `${item.autorotate}` : '')
+                else
+                  img(src=item.avatar onerror=`this.onerror=null;this.src='` + url_for(theme.lodding_bg.flink) + `'` alt=item.name )
+                .md-links-title= item.name 
+                .md-links-des= item.descr
+    != page.content
+  p(style="font-size:14px;font-weight:bold")= theme.PS
+  hr
+  h2= theme.require_headline
+  ul
+    li= theme.requirement1
+    li= theme.requirement2
+    li= theme.requirement3
+    li= theme.requirement4
+    li= theme.requirement5
+    li= theme.requirement6
+  hr
+  h2= theme.myInfo
+  ul
+    li= theme.info1
+    li= theme.info2
+    li= theme.info3
+    li= theme.info4
+
+  if page.comments !== false
+    include includes/comments/index.pug

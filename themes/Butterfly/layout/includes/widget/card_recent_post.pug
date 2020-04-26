@@ -1,0 +1,26 @@
+.card-widget.card-recent-post
+  .card-content
+    .item-headline
+      i.fa.fa-history(aria-hidden="true")
+      span= _p('aside.card_recent_post')
+    .aside-recent-item
+      - var postLimit = theme.aside.card_recent_post.limit === 0 ? site.posts.length : theme.aside.card_recent_post.limit || 5
+      - site.posts.sort('date', -1).limit(postLimit).each(function(article){
+        .aside-recent-post
+          - var link = article.link || article.path
+          - var title = article.title || _p('no_title')
+          - var no_cover = article.cover === false || !theme.cover.aside_enable ? 'no-aside-cover' : ''
+          - var post_cover = article.cover
+
+            a(href=url_for(link))
+              if post_cover && theme.cover.aside_enable
+                .aside-post-cover
+                  if theme.lazyload.enable
+                    img.aside-post-bg.lazyload(data-src=`${post_cover}` onerror=`this.onerror=null;this.src='`+ url_for(theme.lodding_bg.post_page) + `'` title=title alt=title)
+                  else
+                    img.aside-post-bg(src=`${post_cover}` onerror=`this.onerror=null;this.src='`+ url_for(theme.lodding_bg.post_page) + `'` title=title alt=title)
+              .aside-post-title(class=no_cover)
+                .aside-post_title(href=url_for(link) title=article.title || _p('no_title'))= article.title || _p('no_title')
+                time.aside-post_meta.post-meta__date(title=_p('post.created') + ' ' + full_date(article.date)) #[=date(article.date, config.date_format)]
+    
+      - })

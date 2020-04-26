@@ -1,0 +1,227 @@
+#aside_content
+  width: 25%
+
+  .card-widget:not(:first-child)
+    margin-top: 1rem
+
+  .card-widget
+    overflow: hidden
+    border-radius: 8px
+    background: $card-bg
+    box-shadow: 0 4px 8px 6px rgba(7, 17, 27, .06)
+    transition: all .3s
+
+    &:hover
+      box-shadow: 0 4px 12px 12px rgba(7, 17, 27, .15)
+
+  .card-info
+    img
+      width: 110px
+      height: 110px
+      border-radius: 70px
+      transition: all .5s
+
+      &:hover
+        transform: rotate(360deg)
+
+    .author-info
+      &__name
+        font-weight: 500
+        font-size: 1.1rem
+
+      &__description
+        margin-top: -.3rem
+
+    .card-info-data
+      display: table
+      padding: .7rem 0
+      width: 100%
+      table-layout: fixed
+
+      & > .card-info-data-item
+        display: table-cell
+
+        a
+          .headline
+            overflow: hidden
+            color: $font-black
+            text-overflow: ellipsis
+            white-space: nowrap
+            font-size: .7rem
+
+          .length_num
+            margin-top: -.3rem
+            color: $dark-black
+            font-size: 1rem
+
+    .card-info-social-icons
+      margin: .3rem 0 -.3rem
+
+      .social-icon
+        margin: 0 .5rem
+        color: $font-black
+        font-size: 1rem
+        cursor: pointer
+
+      i
+        transition: all .3s
+
+        &:hover
+          transform: rotate(540deg)
+
+    #bookmark-it
+      position: relative
+      z-index: 1
+      display: block
+      background-color: $light-blue
+      color: $button-color
+      line-height: 1.6rem
+
+      span
+        padding-left: .5rem
+
+  .card-content
+    padding: 1rem 1.2rem
+
+  .item-headline
+    font-size: .8rem
+
+    span
+      margin-left: .5rem
+
+  .card-tag-cloud
+    a
+      display: inline-block
+      padding: 0 .1rem
+
+      &:hover
+        color: $light-blue !important
+
+  .card-recent-post
+    .aside-recent-item
+      margin: 10px 0 -15px
+
+      & > .aside-recent-post
+        margin-bottom: 10px
+
+        & > a
+          color: $font-black
+
+          .aside-post-cover
+            float: left
+            overflow: hidden
+            width: 66px
+            height: 66px
+
+            .aside-post-bg
+              padding: 0
+              max-width: 100%
+              width: 100%
+              height: 100%
+              transition: all .6s
+              object-fit: cover
+
+              &:hover
+                box-shadow: none
+                transform: scale(1.1)
+
+          .aside-post-title
+            .aside-post_meta
+              padding-left: 10px
+              color: $theme-meta-color
+              font-size: .6rem
+
+            .aside-post_title
+              display: -webkit-box
+              overflow: hidden
+              padding-left: 10px
+              height: 40px
+              line-height: 1rem
+              -webkit-line-clamp: 2
+              -webkit-box-orient: vertical
+
+              &:hover
+                color: $light-blue !important
+
+            &.no-aside-cover
+              .aside-post_title
+                height: auto
+
+  .card-archives ul.archive-list,
+  .card-categories ul.aside-category-list
+    margin: 0
+    padding: .2rem 0 0
+    list-style: none
+
+  .card-archives ul.archive-list > .archive-list-item,
+  .card-categories ul.aside-category-list > .aside-category-list-item
+    padding: .2rem 1rem
+    cursor: pointer
+    transition: all .3s
+
+    &:hover
+      padding: .2rem .85rem
+      background-color: $light-blue
+
+    a
+      color: $font-black
+
+      span
+        display: inline-block
+        overflow: hidden
+        vertical-align: bottom
+        text-overflow: ellipsis
+        white-space: nowrap
+
+        &:first-child
+          width: 80%
+
+        &:last-child
+          width: 20%
+          text-align: right
+
+  .card-categories
+    .aside-category-list
+      &.child
+        padding: 0 0 0 1.2rem
+
+  .card-webinfo
+    .webinfo
+      padding: .2rem 1rem
+
+      .webinfo-item
+        display: block
+        padding: 4px 0 0
+
+        div
+          &:first-child
+            display: inline-block
+
+          &:last-child
+            display: inline-block
+            float: right
+
+@media screen and (max-width: 900px)
+  .layout_page
+    flex-direction: column
+
+  #recent-posts,
+  #aside_content
+    width: 100% !important
+
+  #aside_content
+    .card-widget:first-child
+      margin-top: 1rem
+
+@media screen and (min-width: 900px)
+  #aside_content
+    .card-widget
+      if hexo-config('aside.position') == 'right'
+        margin-left: 15px
+      else
+        margin-right: 15px
+
+if hexo-config('aside.mobile') == false
+  @media screen and (max-width: $sm)
+    #aside_content
+      display: none

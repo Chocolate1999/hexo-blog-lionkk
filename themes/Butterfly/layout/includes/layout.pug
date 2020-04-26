@@ -1,0 +1,45 @@
+- var hideAside = !theme.aside.enable || page.aside === false ? 'hide-aside' : ''
+
+doctype html
+html(lang=config.language data-theme=theme.display_mode)
+  head
+    include ./head.pug
+  body
+    if theme.preloader
+      !=partial('includes/loading/loading', {}, {cache:theme.fragment_cache})
+
+    if theme.fireworks && theme.fireworks.enable
+      canvas.fireworks
+
+    !=partial('includes/mobile-sidebar/index', {}, {cache:theme.fragment_cache})
+
+    include ./sidebar.pug
+
+    #body-wrap
+      if theme.background
+        - var is_photo = theme.background.substring(3,0) === 'url' ? 'photo':'color'
+        #web_bg(data-type=is_photo)
+      include ./header/index.pug
+
+      if (!is_post())
+        main#content-inner.layout_page(class=hideAside)
+          if body
+            div!= body
+          else
+            block content
+            include widget/index.pug
+      else
+        main#content-inner.layout_post
+          if body
+            div!= body
+          else
+            block content
+      
+      - var footer_bg = theme.footer_bg == false ? '' : bg_img
+      - var is_bg = theme.footer_bg == false ? 'color' : 'photo'
+      footer#footer(style=footer_bg data-type=is_bg)
+        !=partial('includes/footer', {}, {cache:theme.fragment_cache})
+
+    include ./rightside.pug
+    !=partial('includes/search/index', {}, {cache:theme.fragment_cache})
+    include ./additional-js.pug

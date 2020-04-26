@@ -1,0 +1,24 @@
+- var top_img = theme.error_404.background || theme.default_top_img
+- var bg_img = `background-image: url(${top_img})`
+
+doctype html
+html(lang=config.language data-theme=theme.display_mode)
+  head
+    include includes/head.pug
+  body
+    if theme.preloader
+      !=partial('includes/loading/loading', {}, {cache:theme.fragment_cache})
+
+    if theme.fireworks && theme.fireworks.enable
+      canvas.fireworks
+
+    include includes/mobile-sidebar/index.pug
+
+    nav#nav.error-no-found(style=bg_img)
+      include includes/header/header.pug
+      #error_info.is-center
+        h1#error_title= '404'
+        #error_subtitle= theme.error_404.subtitle
+    include includes/rightside.pug
+    !=partial('includes/search/index', {}, {cache:theme.fragment_cache})
+    include includes/additional-js.pug

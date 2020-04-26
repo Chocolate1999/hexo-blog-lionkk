@@ -1,0 +1,20 @@
+mixin articleSort(posts)
+  .article-sort
+    - var year
+    - posts.each(function (article) {
+      - var tempYear = date(article.date, 'YYYY')
+      - var no_cover = article.cover === false || !theme.cover.archives_enable ? 'no-article-cover' : ''
+      if tempYear !== year
+        - year = tempYear
+        .article-sort-item.year= year
+      .article-sort-item(class=no_cover)
+        if article.cover && theme.cover.archives_enable
+          .article-sort-img
+            a.article-sort-item__img(href=url_for(article.path))
+              img(src=article.cover alt=article.title || 'No Title' onerror=`this.onerror=null;this.src='`+ url_for(theme.lodding_bg.post_page) + `'`)
+        .article-sort-post
+          a.article-sort-item__post(href=url_for(article.path))
+            i.fa.fa-clock-o(aria-hidden="true")
+            time.article-sort-item__time(title=_p('post.created') + ' ' + full_date(article.date))= date(article.date, config.date_format)
+            .article-sort-item__title= article.title || 'No Title'
+    - })

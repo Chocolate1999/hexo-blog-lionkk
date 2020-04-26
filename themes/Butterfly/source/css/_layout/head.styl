@@ -1,0 +1,320 @@
+#nav
+  position: relative
+  width: 100%
+  background-color: $light-blue
+  background-attachment: local
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  transition: all .5s
+
+  // index
+  &.full_page
+    height: $index_top_img_height
+
+    #site-info
+      position: absolute
+      top: $index_site_info_top
+      padding: 0 .5rem
+      width: 100%
+
+  #site_title,
+  #site_subtitle,
+  #scroll_down .scroll-down-effects
+    color: $light-grey
+    text-align: center
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .15)
+    line-height: 1.5
+
+  #site_title
+    margin: 0
+    font-size: 1.3rem
+
+  #site_subtitle
+    font-size: .8rem
+
+  #site_social_icons
+    display: none
+    margin: 0 auto
+    width: 15rem
+    text-align: center
+
+    .social-icon
+      margin: 0 .5rem
+      color: $light-grey
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .15)
+      font-size: 1rem
+      cursor: pointer
+
+  #scroll_down
+    position: absolute
+    bottom: 0
+    width: 100%
+    cursor: pointer
+
+    .scroll-down-effects
+      position: relative
+      width: 100%
+      font-size: 30px
+
+  // page
+  &.not-index-bg
+    height: 20rem
+
+  #page_site-info
+    position: absolute
+    top: 10rem
+    padding: 0 .5rem
+    width: 100%
+
+  // post
+  &.post-bg
+    height: 20rem
+
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      background-color: alpha($dark-black, .5)
+      content: ''
+
+    #post-info
+      position: absolute
+      bottom: 1.5rem
+      padding: 0 8%
+      width: 100%
+      color: $light-grey
+      text-align: left
+
+      #post-title
+        margin-bottom: .4rem
+        font-size: 1.5rem
+
+        .posttitle
+          display: -webkit-box
+          overflow: hidden
+          line-height: 1.5
+          -webkit-line-clamp: 3
+          -webkit-box-orient: vertical
+
+      #post-meta
+        font-size: 95%
+
+        > .meta-secondline,
+        > .meta-thirdline
+          display: inline
+
+        .word-count,
+        #busuanzi_value_page_pv,
+        .comment-count
+          padding-left: .2rem
+
+        .post-meta
+          &__separator
+            margin: 0 .3rem
+
+          &__icon
+            margin-right: .2rem
+
+        a
+          color: $light-grey
+          transition: all .3s ease-out
+
+          &:hover
+            color: $light-blue
+            text-decoration: underline
+
+#page-header
+  position: absolute
+  top: 0
+  z-index: 99
+  padding: 10px 36px
+  width: 100%
+  height: 58px
+  border: none
+  font-size: 18px
+  opacity: 0
+  transition: all .5s
+
+  &:not(.fixed)
+    .menus
+      padding-right: 0 !important
+
+  .toggle-menu
+    display: none
+    padding: .1rem 0 0 .3rem
+    vertical-align: top
+
+    &:hover
+      color: $white
+
+    &.is-visible-inline
+      .site-page
+        font-size: inherit
+
+  a
+    color: $light-grey
+
+    &:hover
+      color: $white
+
+  &.fixed
+    position: fixed
+    top: -60px
+    z-index: 101
+    background: alpha($white, .8)
+    box-shadow: 0 5px 6px -5px alpha($grey, .6)
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out
+
+    a,
+    #site-name,
+    .toggle-menu
+      color: $font-black
+      text-shadow: none
+
+      &:hover
+        color: $light-blue
+
+  &.visible
+    transition: all .5s
+    transform: translate3d(0, 100%, 0)
+
+    .menus_item_child
+      background-color: $white !important
+
+  #site-name
+    text-shadow: .1rem .1rem .2rem rgba($dark-black, .15)
+    font-weight: bold
+    cursor: pointer
+
+  .menus_items
+    display: inline
+
+    .menus_item
+      position: relative
+      display: inline-block
+      padding: 0 0 0 .7rem
+
+      &:hover
+        .menus_item_child
+          display: block
+
+        .menus-expand
+          transform: rotate(180deg) !important
+
+      .menus-expand
+        padding: 4px
+        transition: all .3s
+        transform: rotate(0)
+
+      & > a
+        &:after
+          position: absolute
+          bottom: 0
+          left: 0
+          z-index: -1
+          width: 0
+          height: 3px
+          background-color: lighten($theme-color, 30%)
+          content: ''
+          transition: all .3s ease-in-out
+
+        &:hover
+          &:after
+            width: 100%
+
+      .menus_item_child
+        position: absolute
+        right: 0
+        display: none
+        margin-top: 8px
+        padding: 0
+        width: max-content
+        background-color: alpha($white, .8)
+        box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
+        animation: sub_menus .3s .1s ease both
+
+        &:before
+          position: absolute
+          top: -8px
+          left: 0
+          width: 100%
+          height: 20px
+          content: ''
+
+        li
+          list-style: none
+
+          &:hover
+            background: $theme-color
+
+          a
+            display: inline-block
+            padding: .3rem .7rem
+            width: 100%
+            color: $font-black
+            text-shadow: none
+
+  #search_button
+    display: inline
+    padding: 0 0 0 .7rem
+
+  .site-page
+    position: relative
+    padding-bottom: .3rem
+    text-shadow: .05rem .05rem .1rem rgba($dark-black, .3)
+    font-size: .7rem
+    cursor: pointer
+
+@media screen and (min-width: $sm)
+  #nav
+    #site_title
+      font-size: 2rem
+
+    #site_subtitle
+      font-size: 1.2rem
+
+@media screen and (max-width: $sm)
+  #page-header
+    padding: 10px .8rem
+
+  #nav
+    #site_social_icons
+      display: block
+
+    &.not-index-bg
+      height: 14rem
+
+    #page_site-info
+      top: 7rem
+
+    &.post-bg
+      height: 18rem
+
+      & > #post-info
+        bottom: 1rem
+        padding: 0 5%
+
+        & > #post-title
+          font-size: 1.2rem
+
+        & > #post-meta
+          font-size: 90%
+
+          .post-meta__categories
+            display: none
+
+          .meta-thirdline
+            display: block
+
+            .post-meta-pv-cv
+              .post-meta__separator:first-child
+                display: none
+
+            if !hexo-config('busuanzi.page_pv')
+              .post-meta-commentcount
+                .post-meta__separator
+                  display: none

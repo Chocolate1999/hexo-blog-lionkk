@@ -1,0 +1,74 @@
+#sidebar
+  position: fixed
+  top: 0
+  left: -($sidebar-width)
+  z-index: 10
+  padding: 1rem 0 2rem .5rem
+  width: $sidebar-width
+  height: 100%
+  background: $sidebar-background
+  box-shadow: -.25rem 0 .25rem rgba($sidebar-background, .6) inset
+  opacity: .9
+
+  .sidebar-toc
+    ol,
+    li
+      list-style: none
+
+    ol
+      margin-top: .2rem
+      padding-left: .4rem
+
+    &__title
+      padding-right: .5rem
+      text-align: center
+      font-size: 1.3em
+
+    &__content
+      overflow-y: scroll
+      padding-bottom: 5rem
+      height: 90vh
+
+    .toc-link
+      display: block
+      padding-left: .2rem
+      border-right: 3px solid transparent
+      transition: all .2s ease-in-out
+
+      &.active
+        border-right-color: darken($theme-toc-color, 20%)
+        background: $theme-toc-color
+        color: $sidebar-active-color
+
+    &__progress
+      position: relative
+      margin-bottom: .3rem
+      padding-left: .6rem
+      color: $theme-toc-color
+
+      .progress-notice
+        margin-right: .4rem
+
+      .progress-num
+        display: inline-block
+        min-width: .9rem
+
+      &-bar
+        width: 0
+        height: 1px
+        background: $theme-toc-color
+
+@media screen and (max-width: $bg)
+  i#toggle-sidebar
+    display: none
+
+  #sidebar
+    right: -($mobile-sidebar-width)
+    left: auto
+    z-index: 103
+    width: $mobile-sidebar-width
+    opacity: 1
+    transition: all .4s
+
+    .toc-child
+      display: block !important
