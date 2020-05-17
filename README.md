@@ -37,6 +37,17 @@
 
 v1.0.0版本已经发布
 
+:fire: **提醒**
+
+最近有人反馈使用的时候出很多 `Bug`，在此来解释一下，因为本人并没有开发主题，只是在原主题上进行了魔改，方便了新手去搭建博客，因此起名没有包含`theme`，而是 `blog`。 关于本仓库源码，本人已测试过，并且收到一些伙伴的反馈，都是可以直接跑起来的。
+
+因此，在根目录 `_config.yml` 文件里面 `theme`配置依旧是原主题名称（大概在 `98` 行）
+
+```cpp
+theme: Butterfly
+```
+
+
 ## :partly_sunny:特性
 `hexo-theme-butterfly `是基于 <a href="https://github.com/Molunerfinn">Molunerfinn</a> 的<a href="https://github.com/Molunerfinn/hexo-theme-melody"> hexo-theme-melody</a> 的基础上进行开发的。
 
