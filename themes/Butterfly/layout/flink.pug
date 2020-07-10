@@ -4,6 +4,7 @@
       each i in site.data.link
         if i.class_name
           h2!= i.class_name
+          h4= i.cdescr
         if i.class_desc
           .flink-desc!=i.class_desc
         .flink-list
@@ -17,6 +18,23 @@
                 .flink-item-name= item.name 
                 .flink-item-desc= item.descr
     != page.content
+  p(style="font-size:14px;font-weight:bold")= theme.PS
+  hr
+  h2= theme.require_headline
+  ul
+    li= theme.requirement1
+    li= theme.requirement2
+    li= theme.requirement3
+    li= theme.requirement4
+    li= theme.requirement5
+    li= theme.requirement6
+  hr
+  h2= theme.myInfo
+  ul
+    li= theme.info1
+    li= theme.info2
+    li= theme.info3
+    li= theme.info4
   if page.comments !== false
     include includes/comments/index.pug
 
