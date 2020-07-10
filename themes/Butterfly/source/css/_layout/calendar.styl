@@ -1,0 +1,106 @@
+#calendar
+  a
+    text-decoration none
+
+.cal-head
+  margin-bottom: 15px
+  position relative
+  height 20px
+  padding 8px 6px 2px 6px
+
+.cal-prev,.cal-next
+  position absolute
+  top 9px
+  width 16px
+  height 18px
+  padding 3px 4px
+  border 1px solid transparent
+  color #333
+  outline 0
+
+.cal-prev
+  left 8px
+  &:before
+    border-right 9px solid #333
+
+.cal-next
+  right 8px
+  &:before
+    border-left 9px solid #333
+
+.cal-prev:before,.cal-next:before
+  content ''
+  display block
+  width 0
+  height 0
+  border-top 5px solid transparent
+  border-bottom 5px solid transparent
+
+.cal-title
+  width 120px
+  margin 0 auto
+  color #333
+  font bold 14px/18px Arial
+  text-align center
+  a
+    border 1px solid transparent
+    color #9f9f9f
+
+.cal,
+.cal th,
+.cal td
+  border 1px solid #d1d1d1
+
+.cal
+  display: table
+  border-collapse separate
+  border-spacing 0
+  border-width 1px 0 0 1px
+  table-layout fixed
+  width 100%
+  margin 0
+  th
+    background #9f9f9f
+    color #fff
+    border-width 0 1px 1px 0
+    font-weight 700
+  td
+    border-width 0 1px 1px 0
+  tbody
+    a
+      background-color #007acc
+      color #fff
+      display block
+      font-weight 700
+    .cal-today
+      background-color #66ecfd
+      color #fff
+  .cal-gray
+    color #bbb8b8
+
+[data-theme='dark'] .cal .cal-gray
+  color #505050
+
+.cal th,
+.cal td
+  font-weight normal
+  line-height 2.5625
+  padding 0
+  text-align center
+
+[data-theme='dark'] .cal .cal-foot
+  color #9f9f9f
+
+.cal .cal-foot
+  color #2ca6cb
+
+.cal-title a:hover,
+.cal-prev:hover,
+.cal-next:hover,
+.cal .cal-foot:hover,
+.cal .cal-foot:focus,
+.cal tbody a:hover,
+.cal tbody a:focus
+  background-color #686868
+  color #fff
+  cursor pointer

@@ -607,6 +607,8 @@ aside:
     content: This is my Blog
   card_pixiv:
     enable: true
+  card_calendar:
+    enable: true
   card_map:
     enable: true
   card_recent_post:
@@ -770,6 +772,8 @@ inject:
   # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <script src="/js/calendar.js"></script>
+    - <script src="/js/languages.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

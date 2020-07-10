@@ -7,6 +7,8 @@ if theme.aside.enable
         !=partial('includes/widget/card_announcement', {}, {cache:theme.fragment_cache})
       if theme.aside.card_pixiv.enable
         !=partial('includes/widget/card_pixiv', {}, {cache:theme.fragment_cache})
+      if theme.aside.card_calendar.enable
+        !=partial('includes/widget/card_calendar', {}, {cache:theme.fragment_cache})
       if theme.aside.card_map.enable
         !=partial('includes/widget/card_map', {}, {cache:theme.fragment_cache})
       if theme.aside.card_recent_post.enable
