@@ -9,10 +9,10 @@
           .flink-desc!=i.class_desc
         .flink-list
           each item in i.link_list
-            .flink-list-item
-              a(href=url_for(item.link)  title=item.name target="_blank")
+            .flink-list-item(style= item.color ? `--primary-color:${item.color};border-width:${item.width};border-style:${item.style};animation: ${item.custom} ${item.time} infinite alternate; background:${item.background}` : 'border-width:0px;border-style:solid;animation: link_custom 0s infinite alternate;background:0')
+              a(href=url_for(item.link)  title=item.name target="_blank" rel=item.remove ? "external nofollow" : "" style=item.namecolor ? `--namecolor:${item.namecolor}` : '')
                 if theme.lazyload.enable
-                  img(data-src=url_for(item.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=item.name )
+                  img(data-src=url_for(item.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=item.name ,style=item.rotate ? `--primary-rotate:${item.rotate};--autotime:${item.autotime};` : '--primary-rotate:0deg' class=item.autorotate ? `${item.autorotate}` : '')
                 else
                   img(src=url_for(item.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=item.name )
                 .flink-item-name= item.name 
