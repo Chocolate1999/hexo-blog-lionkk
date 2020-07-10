@@ -32,6 +32,9 @@ i18n_dir: :lang
 skip_render:
   - 'home/*'
   - 'home/**'
+  - 'box/*'
+  - 'box/**'
+
   
 # Writing
 new_post_name: :title.md # File name of new posts
