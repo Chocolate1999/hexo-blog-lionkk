@@ -5,6 +5,8 @@ if theme.aside.enable
         !=partial('includes/widget/card_author', {}, {cache:theme.fragment_cache})
       if theme.aside.card_announcement.enable
         !=partial('includes/widget/card_announcement', {}, {cache:theme.fragment_cache})
+      if theme.aside.card_map.enable
+        !=partial('includes/widget/card_map', {}, {cache:theme.fragment_cache})
       if theme.aside.card_recent_post.enable
         !=partial('includes/widget/card_recent_post', {}, {cache:theme.fragment_cache})
       if theme.ad && theme.ad.aside
