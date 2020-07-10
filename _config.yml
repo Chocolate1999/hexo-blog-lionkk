@@ -122,8 +122,8 @@ live2d:
 		use: live2d-widget-model-haruto #模型选择
 	display: 
 		position: right  #模型位置
-		width: 150       #模型宽度
-		height: 300      #模型高度
+		width: 120       #模型宽度
+		height: 260      #模型高度
 	mobile: 
     show: false      #是否在手机端显示
     

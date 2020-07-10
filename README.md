@@ -4,7 +4,11 @@
 
 <p align="center">
 <img src="https://camo.githubusercontent.com/87301d019d7f5fd66e4186fcf2f7e7a2276fd9f1/68747470733a2f2f7472617669732d63692e636f6d2f736877323031382f736877323031382e6769746875622e696f2e737667" alt="Build Status" data-canonical-src="https://travis-ci.comChocolate1999/hexo-blog-lionkk.svg" style="max-width:100%;">
-<a href="http://hits.dwyl.com/Chocolate1999/hexo-blog-lionkk"><img src="http://hits.dwyl.com/Chocolate1999/hexo-blog-lionkk.svg" alt="HitCount"></a><a href="https://www.gnu.org/licenses/"> <img src="https://img.shields.io/github/license/Chocolate1999/hexo-blog-lionkk.svg" alt="License"></a><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/network"> <img src="https://img.shields.io/github/forks/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub forks"></a> <a href="https://github.com/Chocolate1999/hexo-blog-lionkk/stargazers"> <img src="https://img.shields.io/github/stars/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub stars"></a></p>
+<a href="http://hits.dwyl.com/Chocolate1999/hexo-blog-lionkk"><img src="http://hits.dwyl.com/Chocolate1999/hexo-blog-lionkk.svg" alt="HitCount"></a><a href="https://www.gnu.org/licenses/"> <img src="https://img.shields.io/github/license/Chocolate1999/hexo-blog-lionkk.svg" alt="License"></a><a href="https://github.com/Chocolate1999/hexo-blog-lionkk/network"> <img src="https://img.shields.io/github/forks/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub forks"></a> <a href="https://github.com/Chocolate1999/hexo-blog-lionkk/stargazers"> <img src="https://img.shields.io/github/stars/Chocolate1999/hexo-blog-lionkk.svg" alt="GitHub stars"></a>
+<a href="https://github.com/Chocolate1999/hexo-blog-lionkk/releases"><img alt="Version" src="https://img.shields.io/badge/release-2.0.0-blue"/></a><a href="https://yangchaoyi.vip/"><img alt="Author" src="https://img.shields.io/badge/author-yangchaoyi-blur"/></a>
+<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/hexo-4.0+-0e83c"/></a>
+<a href="https://nodejs.org/"><img alt="node.js" src="https://img.shields.io/badge/node.js-8.0+-blur"/></a>
+</p>
 
 >This is my personal blog repository. <a href="https://yangchaoyi.vip/">https://yangchaoyi.vip/</a> Now,it is open for everyone to download and modify. If it can help you to build your blog or you like the repo, could you give me a star ! Thank you!
 
@@ -36,6 +40,20 @@
 <a href="https://www.bilibili.com/video/BV1qe411s7Y5">叮咚~ 关于博客搭建教程的视频介绍</a>
 
 v1.0.0版本已经发布
+
+
+2020年7月10日更新至 **V2.0.0**，由于作者主题更新到 `v3.0.0`，也有小伙伴私信我要我更新，也有询问我如何更新，今天就打算再次魔改一下。
+
+首先，当然是将主题进行升级，其次，进行多处魔改，有涉及到修改源码，因此如若小伙伴以后需要升级主题的话，还是得参照我已经写好的魔改教程，以免各种报错影响心态。那么，就将当前版本设为`v2.0.0`吧，我想应该已经足以使用了，如若是为了各种花里胡哨的样式的话，那这个版本可能还需要进一步优化等着你来探索。但对于一般写写博客已经足以达到需求。
+
+### :triangular_flag_on_post:	 鸣谢
+Demo:  👍 [Butterfly](https://demo.jerryc.me/)  ||   🤞 [JerryC](https://jerryc.me/)
+
+一款基於[hexo-theme-melody](https://github.com/Molunerfinn/hexo-theme-melody)修改的主題
+
+>本主题基本上是照着原主题进行魔改而来，并非本人开发这个主题，在此感谢原作者的用心，小伙伴们可以去原作者博客文档查阅更多内容，顺便点个 star 哈。本魔改博客预计不再升级，因此后续升级内容教程也可以访问本站: yangchaoyi.vip 来咨询本人。此致，敬礼！
+
+
 
 :fire: **提醒**
 
@@ -99,7 +117,7 @@ theme: Butterfly
  - [x] 添加默认头像，保持旋转
  - [x] 更改默认字体，博客名称，首尾背景图
  - [x] 页面底部 `footer` 跳动的心
- - [ ] 添加访客地图
+ - [x] 添加访客地图
  - [x] 添加Pixiv 日榜
  - [x] 添加日历
  - [x] 添加哔哩哔哩番剧页面插件
@@ -109,18 +127,21 @@ theme: Butterfly
  - [x] 豆瓣插件（`movie`、`book`、`game`）
  - [x] 友链界面加入自定义文字
  - [x] 友链链接区块加入一行小字
- - [ ] Valine添加博主标签及评论微信、QQ通知
+ - [x] Valine添加博主标签及评论微信、QQ通知
  - [ ] 文章尾部投票打星系统
- - [ ] 添加聚宝盒页面
+ - [x] 添加聚宝盒页面
  - [x] 添加首页导航
  - [x] 添加音乐 `music` 页面
- - [ ] `Gitalk`、`Valine` 双评论系统切换
+ - [x] `Gitalk`、`Valine` 双评论系统切换
  - [ ] 随机文章跳转
  - [ ] 加入 `steam` 游戏库界面
  - [x] 新增友链样式美化（<a href="https://yangchaoyi.vip/link/">传送门</a>）
  - [x] 友链添加炫彩呼吸灯效果
- - [ ] Valine添加 `bilibili` 表情包
+ - [x] Valine添加 `bilibili` 表情包
  - [ ] `botui` 对话框式简介页面
+ - [x] 增加 `mac`风格代码
+ - [x] 更改主题背景风格
+ - [ ] 发表说说页面
  - [ ] 持续更新...
 ## :pushpin:贡献
 本仓库已经为您搭建好了博客框架，极大地简化了您构建博客的工作量和复杂度，每个人都可以下载并修改成自己喜欢样式！如果你有修改想法，`fork`本仓库，欢迎PR！
