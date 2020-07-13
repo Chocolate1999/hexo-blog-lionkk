@@ -1,6 +1,6 @@
 ## :sunny:hexo-blog-lionkk
 
-<p align="center"> <a href="https://yangchaoyi.vip" target="_blank" rel="noopener noreferrer"><img width="100" src="https://Chocolate1999.github.io/img/avatar.png" alt="Blog logo"></a> </p>
+<p align="center"> <a href="https://yangchaoyi.vip" target="_blank" rel="noopener noreferrer"><img width="100" src="https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png" alt="Blog logo"></a> </p>
 
 <p align="center">
 <img src="https://camo.githubusercontent.com/87301d019d7f5fd66e4186fcf2f7e7a2276fd9f1/68747470733a2f2f7472617669732d63692e636f6d2f736877323031382f736877323031382e6769746875622e696f2e737667" alt="Build Status" data-canonical-src="https://travis-ci.comChocolate1999/hexo-blog-lionkk.svg" style="max-width:100%;">
