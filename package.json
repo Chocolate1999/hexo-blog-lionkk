@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "hexo": "^5.4.1",
-    "hexo-abbrlink": "^2.0.5",
+    "hexo-abbrlink": "^2.2.1",
     "hexo-bilibili-bangumi": "^1.8.2",
     "hexo-douban": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
